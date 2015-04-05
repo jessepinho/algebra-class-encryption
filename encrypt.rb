@@ -37,12 +37,12 @@ def encrypt_character(character)
 end
 
 # The first line is a little weird. Basically, we're going over the text and
-# scanning for *either* two digit characters (represented by "\d") or one space
-# (represented by "\s"). We want two digit characters because each encrypted
-# letter is a two-digit number, like 01 or 26. We get an array of these one- or
-# two-character bits of text, then map each item in the array to the decrypted
-# version of itself by calling "decrypt_character" on it. At the end, join the
-# whole list back together so that it is text again.
+# scanning for *either* two characters that are digits (represented by "\d") or
+# one space (represented by "\s"). We want two characters that are digits
+# because each encrypted letter is a two-digit number, like 01 or 26. We get an
+# array of these one- or two-character bits of text, then map each item in the
+# array to the decrypted version of itself by calling "decrypt_character" on
+# it. At the end, join the whole list back together so that it is text again.
 
 def decrypt(text)
   text.scan(/\d\d|\s/).map { |character|
