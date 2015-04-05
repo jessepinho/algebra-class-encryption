@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# This file simply includes the encryption/decryption code, then calls the
+# "decrypt" method on the text that's sent in.
+
+require_relative 'encrypt.rb'
+puts decrypt(ARGV.join(" "))
